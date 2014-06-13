@@ -26,9 +26,6 @@ complete <- function(directory, id = 1:332) {
         ccTrue <- cc[cc==TRUE]              ## reduce to vector of only true values
         ccTrueCount <- length(ccTrue)       ## count the true values
         nobs <- c(nobs,ccTrueCount)
-        
-        ## store the id and count of complete cases
-        #resultantFrame <- resultantFrame + c(id,ccTrueCount)    
     }
-
+    data.frame(id,nobs)
 }
