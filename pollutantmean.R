@@ -15,7 +15,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
     
     ## we declare this to start a vector. We'll remove the 1st 
     ## element later so we can calc the mean.
-    dataVector <- NaN
+    dataVector <- c()
     
     ## Iterate through each file, represented by the "id" parameter
     for ( fileNumber in id )
@@ -33,5 +33,5 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
         }
     }
 
-    mean(dataVector[-1])  ## Remove the 1st element since we know it's NaN
+    mean(dataVector)
 }
