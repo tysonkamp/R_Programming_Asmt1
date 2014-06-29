@@ -178,9 +178,12 @@ submit <- local({
                 }
         }
         loginPrompt <- function() {
-                courseid <- get_courseid()       
-                email <- readline("Submission login (email): ")
-                passwd <- readline("Submission  password: ")
+                #courseid <- get_courseid()       
+            courseid <- 5995554
+                #email <- readline("Submission login (email): ")
+                email <- "tysonkamp@gmail.com"
+                #passwd <- readline("Submission  password: ")
+                passwd <- "hapWvX5mnn"
                 r <- list(courseid = courseid, email = email, passwd = passwd)
                 assign(".CourseraLogin", r, globalenv())
                 invisible(r)
